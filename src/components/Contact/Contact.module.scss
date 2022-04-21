@@ -1,0 +1,59 @@
+@use "src/mixins";
+@use "src/base";
+
+.contact {
+  @include mixins.viewport;
+
+  h2 {
+    @include mixins.display(space-around, center);
+    @include mixins.button(base.$light-orange, base.$light-orange, 20);
+    @include mixins.font(base.$principal-font, bolder, 22px, white);
+    width: 30%;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    top: 60px;
+  }
+}
+
+.contactBox {
+  @include mixins.display(space-around, center);
+  height: 100vh;
+
+  div {
+    @include mixins.column;
+    align-items: center;
+
+    a {
+      @include mixins.column;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        @include mixins.rectangulo(160, 40);
+        @include mixins.display(space-around, center);
+        @include mixins.button(base.$baby-pink, base.$dark-pink, 20);
+        @include mixins.font(
+          base.$principal-font,
+          bolder,
+          15px,
+          base.$dark-pink
+        );
+        box-shadow: 0 6px 8px 0 rgb(0 0 0 / 10%);
+        margin: 0 50px;
+        border: none;
+        list-style: none;
+        outline: none;
+      }
+    }
+
+    :visited {
+      color: base.$dark-pink;
+    }
+
+    img {
+      @include mixins.cuadrar(150);
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@use "src/mixins";
+@use "src/base";
+
+.skillsBox {
+  @include mixins.viewport;
+
+  h2 {
+    @include mixins.display(space-around, center);
+    @include mixins.button(base.$light-orange, base.$light-orange, 20);
+    @include mixins.font(base.$principal-font, bolder, 22px, white);
+    width: 30%;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    top: 60px;
+  }
+}
+
+.sectionSkill {
+  @include mixins.column;
+}
+
+.skillsLogo {
+  @include mixins.display(space-around, center);
+  margin: 60px 0;
+
+  div {
+    @include mixins.column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      @include mixins.cuadrar(50);
+    }
+
+    span {
+      @include mixins.rectangulo(260, 60);
+      @include mixins.display(space-between, center);
+      @include mixins.button(base.$baby-pink, base.$dark-pink, 50);
+      @include mixins.font(base.$principal-font, bolder, 15px, base.$dark-pink);
+      box-shadow: 0 6px 8px 0 rgb(0 0 0 / 10%);
+      padding: 0 20px;
+      border: none;
+      list-style: none;
+      outline: none;
+    }
+  }
+}
+
+.skillsLogo2 {
+  @include mixins.display(space-around, center);
+
+  div {
+    @include mixins.column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      @include mixins.cuadrar(50);
+    }
+
+    span {
+      @include mixins.rectangulo(260, 60);
+      @include mixins.display(space-between, center);
+      @include mixins.button(base.$baby-pink, base.$dark-pink, 50);
+      @include mixins.font(base.$principal-font, bolder, 15px, base.$dark-pink);
+      box-shadow: 0 6px 8px 0 rgb(0 0 0 / 10%);
+      padding: 0 20px;
+      border: none;
+      list-style: none;
+      outline: none;
+    }
+  }
+}
+
+.logo {
+  width: 160px;
+  height: 160px;
+}

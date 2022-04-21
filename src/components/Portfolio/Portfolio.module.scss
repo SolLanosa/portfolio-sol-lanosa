@@ -1,0 +1,18 @@
+@use "src/mixins";
+@use "src/base";
+
+.portfolio {
+  width: 100%;
+
+  .titleBox {
+    @include mixins.display(space-around, center);
+    @include mixins.button(base.$light-orange, base.$light-orange, 20);
+    @include mixins.font(base.$principal-font, bolder, 18px, white);
+    width: 30%;
+    height: 40px;
+    margin: auto;
+    color: white;
+    position: relative;
+    top: 28px;
+  }
+}

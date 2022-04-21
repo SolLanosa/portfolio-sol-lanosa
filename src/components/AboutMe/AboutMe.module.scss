@@ -1,0 +1,39 @@
+@use "src/mixins";
+@use "src/base";
+
+.aboutme {
+  @include mixins.viewport;
+
+  h2 {
+    @include mixins.button(base.$light-orange, base.$light-orange, 20);
+    @include mixins.font(base.$principal-font, bolder, 23px, white);
+    @include mixins.display(space-around, center);
+    width: 30%;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    top: 60px;
+  }
+}
+
+.aboutBox {
+  @include mixins.display(space-around, center);
+
+  p {
+    @include mixins.font(base.$principal-font, bold, 22px, base.$dark-pink);
+    text-align: left;
+    width: 470px;
+    padding: 18px;
+    border-radius: 20px;
+    margin-top: 30px;
+  }
+
+  img {
+    @include mixins.rectangulo(350, 450);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    margin: 100px 0 0 80px;
+    border-radius: 20px;
+  }
+}
