@@ -160,7 +160,7 @@
       padding: 10px;
       width: 100%;
       display: block;
-      background-color:#0000EC;
+      background-color:base.$light-green;
       border: none;
       color: white;
       font-size: 16px;
@@ -168,7 +168,7 @@
   }
 
   .nav a:hover {
-    background-color:#f3f3f3;
+    background-color:base.$light-beige;
     color: black;
   }
 }
@@ -183,6 +183,7 @@ section {
   /*Parte izquierda*/
   .inicialPage {
     margin-left: 100px;
+    margin-right: 20px;
     max-width: 45%;
     @include mixins.column;
     justify-content: center;
@@ -271,5 +272,9 @@ section {
       section .inicialPage h1 {
         @include mixins.font(base.$second-font, bold, 124px, base.$light-green);
         line-height: 124px;
+      }
+
+      section .inicialPage p {
+        font-size: 13px;
       }
     }

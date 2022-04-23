@@ -12,7 +12,7 @@ export default function InicialPage() {
           <nav className={styles.navbar}>
             <ul className={styles.menu}>
               <li>
-                <a href="#episode-section">ABOUT ME</a>
+                <a href="#aboutme-section">ABOUT ME</a>
               </li>
               <li>
                 <a href="#about-us-section">PORTFOLIO</a>
