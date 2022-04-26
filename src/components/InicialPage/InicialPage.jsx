@@ -46,7 +46,7 @@ export default function InicialPage() {
                 <a href="#interview-section">SKILLS</a>
               </li>
               <li>
-                <a href="#topic-section">CONTACT ME</a>
+                <a href="#contact-section">CONTACT ME</a>
               </li>
             </ul>
           </div>

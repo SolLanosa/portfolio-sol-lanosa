@@ -9,7 +9,7 @@ export default function Contact() {
       <h2>CONTACT ME</h2>
       <div className={styles.contactBox}>
         <div className={styles.sendEmail}>
-          <span className={styles.spantitle}>Send me an email:</span>
+          <span className={styles.spantitle}>Send me an Email:</span>
           <ContactForm />
         </div>
         <div className={styles.socialnetwork}>
@@ -17,7 +17,7 @@ export default function Contact() {
           <ul className={styles.wrapper}>
             <li className={classNames(styles.icon, styles.linkedin)}>
               <span className={styles.tooltip}>Linkedin</span>
-              <a href="">
+              <a target="_blank" href="https://www.linkedin.com/in/sol-lanosa/">
                 <span>
                   <i class="fab fa-linkedin"></i>
                 </span>
@@ -25,7 +25,7 @@ export default function Contact() {
             </li>
             <li className={classNames(styles.icon, styles.github)}>
               <span className={styles.tooltip}>Github</span>
-              <a href="">
+              <a target="_blank" href="https://github.com/SolLanosa">
                 <span>
                   <i class="fab fa-github"></i>
                 </span>

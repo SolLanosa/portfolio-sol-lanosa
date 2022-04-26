@@ -5,19 +5,9 @@ import styles from "./ContactForm.module.scss";
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xrgjobkz");
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
-
-  let textarea = document.querySelector("textarea");
-
-  textarea.addEventListener("keydown", autosize);
-
-  function autosize() {
-    let el = this;
-    setTimeout(function () {
-      el.style.cssText = "height:auto; padding:0";
-      el.style.cssText = "height:" + el.scrollHeight + "px";
-    }, 0);
+    return (
+      <p className={styles.messageThanks}>Thank you for reaching out to me!</p>
+    );
   }
 
   return (
