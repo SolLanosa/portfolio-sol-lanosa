@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <InicialPage />
       <AboutMe />
+      <Portfolio proyectsData={proyectsData} />
       <Skills />
       <Contact />
     </div>
