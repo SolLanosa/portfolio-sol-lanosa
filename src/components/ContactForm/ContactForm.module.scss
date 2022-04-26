@@ -35,7 +35,7 @@
     
     textarea {
         margin: 10px 0;
-        height: fit-content;
+        height: 100px;
         padding: 5px;
         width: 300px;
         font-family: base.$principal-font;
@@ -48,10 +48,6 @@
         display:block;
         resize: none;
         background-color: base.$light-beige;
-    
-        &::-webkit-scrollbar {
-            display: none;
-        }
     }
 
     button {
