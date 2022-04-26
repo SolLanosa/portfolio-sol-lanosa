@@ -1,37 +1,37 @@
 import React from "react";
 import styles from "./Contact.module.scss";
+import ContactForm from "../ContactForm/ContactForm";
+import classNames from "classnames";
 
 export default function Contact() {
   return (
     <div id="contact-section" className={styles.contact}>
       <h2>CONTACT ME</h2>
       <div className={styles.contactBox}>
-        <div>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/mar%C3%ADa-sol-lanosa-a59a03218/"
-          >
-            <img src="/img/linkedin.png" alt="" />
-            <button>LINKEDIN</button>
-          </a>
+        <div className={styles.sendEmail}>
+          <span className={styles.spantitle}>Send me an email:</span>
+          <ContactForm />
         </div>
-        <div>
-          <a target="_blank" href="https://github.com/SolLanosa">
-            <img src="/img/github.png" alt="" />
-            <button>GITHUB</button>
-          </a>
-        </div>
-        <div>
-          <a target="_blank" href="mailto:mslanosa@hotmail.com">
-            <img src="/img/hotmail.png" alt="" />
-            <button>MAIL</button>
-          </a>
-        </div>
-        <div>
-          <a target="_blank" href="">
-            <img src="/img/cv.png" alt="" />
-            <button>CV</button>
-          </a>
+        <div className={styles.socialnetwork}>
+          <span className={styles.spantitle}>Get to know me more:</span>
+          <ul className={styles.wrapper}>
+            <li className={classNames(styles.icon, styles.linkedin)}>
+              <span className={styles.tooltip}>Linkedin</span>
+              <a href="">
+                <span>
+                  <i class="fab fa-linkedin"></i>
+                </span>
+              </a>
+            </li>
+            <li className={classNames(styles.icon, styles.github)}>
+              <span className={styles.tooltip}>Github</span>
+              <a href="">
+                <span>
+                  <i class="fab fa-github"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
