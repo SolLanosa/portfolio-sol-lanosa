@@ -21,7 +21,7 @@ export default function InicialPage() {
                 <a href="#interview-section">SKILLS</a>
               </li>
               <li>
-                <a href="#topic-section">CONTACT ME</a>
+                <a href="#contact-section">CONTACT ME</a>
               </li>
             </ul>
           </nav>
@@ -37,7 +37,7 @@ export default function InicialPage() {
           <div className={styles.nav}>
             <ul>
               <li>
-                <a href="#episode-section">ABOUTE ME</a>
+                <a href="#aboutme-section">ABOUT ME</a>
               </li>
               <li>
                 <a href="#about-us-section">PORTFOLIO</a>
