@@ -2,13 +2,12 @@
 @use "src/base";
 
 .skillsBox {
-  @include mixins.viewport;
 
   h2 {
     @include mixins.display(space-around, center);
-    @include mixins.button(base.$light-orange, base.$light-orange, 20);
-    @include mixins.font(base.$principal-font, bolder, 22px, white);
-    width: 30%;
+    @include mixins.button(base.$light-green, base.$light-green, 20);
+    @include mixins.font(base.$principal-font, bolder, 22px, base.$dark-pink);
+    width: 20%;
     height: 40px;
     margin: auto;
     position: relative;
@@ -17,58 +16,38 @@
 }
 
 .sectionSkill {
-  @include mixins.column;
-}
-
-.skillsLogo {
   @include mixins.display(space-around, center);
-  margin: 60px 0;
+  margin: auto;
+  flex-wrap: wrap;
+  flex: 1;
+  max-width: 650px;
+  margin-top: 80px;
 
   div {
-    @include mixins.column;
-    justify-content: center;
-    align-items: center;
+    margin: 20px 20px;
+    width: 190px;
+    @include mixins.display(center, center);
 
     img {
       @include mixins.cuadrar(50);
+      margin-right: 20px;
     }
 
     span {
-      @include mixins.rectangulo(260, 60);
+      height: 60px;
       @include mixins.display(space-between, center);
-      @include mixins.button(base.$baby-pink, base.$dark-pink, 50);
+      @include mixins.button(white, base.$dark-pink, none);
       @include mixins.font(base.$principal-font, bolder, 15px, base.$dark-pink);
       box-shadow: 0 6px 8px 0 rgb(0 0 0 / 10%);
+      border: 2px solid black;
       padding: 0 20px;
       border: none;
       list-style: none;
       outline: none;
     }
-  }
-}
 
-.skillsLogo2 {
-  @include mixins.display(space-around, center);
-
-  div {
-    @include mixins.column;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      @include mixins.cuadrar(50);
-    }
-
-    span {
-      @include mixins.rectangulo(260, 60);
-      @include mixins.display(space-between, center);
-      @include mixins.button(base.$baby-pink, base.$dark-pink, 50);
-      @include mixins.font(base.$principal-font, bolder, 15px, base.$dark-pink);
-      box-shadow: 0 6px 8px 0 rgb(0 0 0 / 10%);
-      padding: 0 20px;
-      border: none;
-      list-style: none;
-      outline: none;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
@@ -76,4 +55,16 @@
 .logo {
   width: 160px;
   height: 160px;
+}
+
+@media (max-width:780px) {
+  .skillsBox {
+    h2 {
+      width: 40%;
+    }
+  }
+  .sectionSkill {
+    max-width: 370px;
+    margin-top: 80px;
+  }
 }

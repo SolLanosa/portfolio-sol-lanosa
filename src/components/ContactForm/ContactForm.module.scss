@@ -30,6 +30,7 @@
         font-family: base.$principal-font;
         font-size: 14px;
         padding: 5px;
+        background-color: base.$light-beige;
     }
     
     textarea {
@@ -45,6 +46,8 @@
         outline: none;
         overflow: hidden;
         display:block;
+        resize: none;
+        background-color: base.$light-beige;
     
         &::-webkit-scrollbar {
             display: none;
@@ -52,14 +55,39 @@
     }
 
     button {
-        @include mixins.button(base.$light-green, base.$light-green, 20);
+        @include mixins.button(base.$dark-pink, base.$dark-pink, 20);
         color: white;
         width: 200px;
         height: 30px;
         margin-top: 30px;
 
         &:hover {
-        @include mixins.button(#4e584bc9, #4e584bc9, 20);
+        @include mixins.button(#bb899899, #bb899899, 20);
         }
     }
+}
+
+@media (max-width:780px) {
+    .form {
+        @include mixins.column;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+}
+
+@media (max-width:350px) {
+    .messageThanks {
+        margin-top: 25px;
+    }
+
+    .form {
+        input {
+        width: 250px;
+    }
+        textarea {
+            width: 250px;
+        } 
+}
+   
 }

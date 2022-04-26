@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <InicialPage />
       <AboutMe />
+      <Skills />
       <Contact />
     </div>
   );

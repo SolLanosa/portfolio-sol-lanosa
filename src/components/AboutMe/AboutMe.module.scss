@@ -13,7 +13,7 @@
       @include mixins.button(base.$light-green, base.$light-green, 20);
       @include mixins.font(base.$principal-font, bolder, 23px, base.$dark-pink);
       @include mixins.display(center, center);
-      width: 30%;
+      width: 20%;
       height: 40px;
       margin-top: 60px;
     }
@@ -24,7 +24,7 @@
   @include mixins.display(space-evenly, center);
   width: 100%;
   height: 100vh;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 
   p {
     @include mixins.font(base.$principal-font, bold, 22px, base.$dark-pink);

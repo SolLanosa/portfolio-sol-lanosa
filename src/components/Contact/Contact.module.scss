@@ -2,16 +2,16 @@
 @use "src/base";
 
 .contact {
-  @include mixins.viewport;
   @include mixins.column;
   display: flex; 
   align-items: center; 
+  margin: 80px 0;
 
   h2 {
     @include mixins.display(space-around, center);
     @include mixins.button(base.$light-green, base.$light-green, 20);
     @include mixins.font(base.$principal-font, bolder, 22px, base.$dark-pink);
-    width: 30%;
+    width: 20%;
     height: 40px;
     margin: 80px auto;
   }
@@ -121,11 +121,39 @@
         }
       }
     }
-  }
-
-
-     
+  }    
 }
+
+
+@media (max-width:780px) {
+  .contact  {
+    margin: 80px 0 40px;
+    
+    h2 {
+      width: 40%;
+      margin: 80px auto 20px;
+      @include mixins.font(base.$principal-font, bolder, 19px, base.$dark-pink);
+    }
+
+    .contactBox {
+      @include mixins.column;
+      margin-left: 20px;
+  
+      .socialnetwork {
+        margin-top: 50px;
+
+        .wrapper  {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+
 
 
 
