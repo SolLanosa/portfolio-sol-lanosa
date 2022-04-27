@@ -23,4 +23,12 @@ export const proyectsData = [
     link: "https://fjszp.csb.app/",
     linkcode: "https://codesandbox.io/s/sprint-3-aplicacion-web-fjszp",
   },
+
+  {
+    projectname: "Twitter para Desarrolladores",
+    photo: "/img/mac-sprint2.png",
+    info: "El desafío de este proyecto consiste en la creación de una aplicación web interactiva, poniendo en práctica los fundamentos de la programación y el uso de React como líbreria. El principal objetivo fue el desarrollo de un filter que devuelve hoteles en función del país, precio, tamaño y disponibilidad.",
+    link: "https://acamica-intro-clase.web.app/",
+    linkcode: "https://github.com/SolLanosa/devs-united-acamica",
+  },
 ];

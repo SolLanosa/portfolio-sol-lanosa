@@ -5,6 +5,7 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import AboutMe from "./components/AboutMe/AboutMe";
 import { proyectsData } from "../src/data";
 import Contact from "./components/Contact/Contact";
+import Slider from "./components/Slider/Slider";
 
 function App() {
   return (

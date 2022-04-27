@@ -1,0 +1,64 @@
+@use "src/base";
+@use "src/mixins";
+
+.swiper {
+    width: 100%;
+
+    .slide {
+        width: 50%;
+        .slideBox {
+            @include mixins.column;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+           
+            
+            span {
+                @include mixins.font(base.$principal-font, bolder, 26px, base.$dark-pink);
+                padding-top: 40px;
+            }
+    
+            img {
+                width: 35%;
+                height: 35%;
+            }
+        }
+
+        .description {
+            width: 100%;
+            @include mixins.display(center, center);
+            margin-bottom: 20px;
+
+            p {
+                width: 450px;
+                text-align: justify;
+                @include mixins.font(base.$principal-font, none, 20px, black);
+            }
+        }
+
+        .buttonBox {
+            width: 100%;
+            @include mixins.display(center, center);
+            margin-bottom: 40px;
+
+            button {
+                @include mixins.button(base.$dark-pink, base.$dark-pink, 20);
+                @include mixins.rectangulo(150,15);
+                @include mixins.font(base.$principal-font, bolder, 15px, white);
+                @include mixins.display(center, center);
+                padding: 10px;
+                margin-left: 30px;
+
+                &:hover {
+                    @include mixins.button(white, base.$dark-pink, 20);
+                    color: base.$dark-pink;
+                }
+            }
+
+          
+        }
+
+
+
+    }
+}

@@ -1,61 +1,61 @@
 @use "src/base";
-
 @use "src/mixins";
 
-.proyects {
-  display: flex;
-}
+.projectWrapper {
+    width: 100%;
+    min-height: 700px;
+    max-height: 700px;
+    box-sizing: border-box;
 
-.rowReverse {
-  flex-direction: row-reverse;
-}
+    @include mixins.column;
 
-.portfolioImg {
-  @include mixins.column;
-  background-color: base.$dark-pink;
-  height: 100vh;
-  width: 50%;
+    .slideBox {
+        @include mixins.column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+       
+        
+        span {
+            @include mixins.font(base.$principal-font, bolder, 26px, base.$dark-pink);
+            padding-top: 40px;
+        }
 
-  span {
-    @include mixins.font(base.$principal-font, bolder, 20px, white);
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
-.portfolioInfo {
-  @include mixins.column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-
-  p {
-    @include mixins.font(base.$principal-font, bolder, 22px, base.$dark-pink);
-    text-align: justify;
-    width: 370px;
-    padding: 18px;
-    margin-top: 30px;
-  }
-
-  a {
-    width: 30%;
-    height: 40px;
-    margin-top: 20px;
-
-    :visited {
-      color: white;
+        img {
+          width: 55%;
+        }
     }
 
-    button {
-      @include mixins.button(base.$light-orange, base.$light-orange, 20);
-      @include mixins.font(base.$principal-font, bolder, 15px, white);
-      width: 100%;
-      height: 40px;
+    .description {
+        width: 100%;
+        @include mixins.display( center,flex-start);
+        margin-bottom: 20px;
+        flex: 1;
+
+        p {
+            width: 450px;
+            text-align: justify;
+            @include mixins.font(base.$principal-font, none, 20px, black);
+        }
     }
-  }
+
+    .buttonBox {
+        width: 100%;
+        @include mixins.display(center, center);
+        margin-bottom: 50px;
+
+        button {
+            @include mixins.button(base.$dark-pink, base.$dark-pink, 20);
+            @include mixins.rectangulo(150,15);
+            @include mixins.font(base.$principal-font, bolder, 15px, white);
+            @include mixins.display(center, center);
+            padding: 10px;
+            margin-left: 30px;
+
+            &:hover {
+                @include mixins.button(white, base.$dark-pink, 20);
+                color: base.$dark-pink;
+            }
+        }
+    }
 }

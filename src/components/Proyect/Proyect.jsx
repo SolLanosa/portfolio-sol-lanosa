@@ -1,26 +1,28 @@
 import React from "react";
 import styles from "./Proyect.module.scss";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 
 export default function Proyects(props) {
-  const style = [styles.proyects];
-  if (props.inverted) {
-    style.push(styles.rowReverse);
-  }
   return (
-    <div className={style.join(" ")}>
-      <div className={styles.portfolioImg}>
+    <div className={styles.projectWrapper}>
+      <div className={styles.slideBox}>
         <span>{props.projectname}</span>
         <img src={props.photo} alt="" />
       </div>
-      <div className={styles.portfolioInfo}>
+      <div className={styles.description}>
         <p>{props.info}</p>
-
-        <a href={props.link} target="_blank">
-          <button>VISITAR EL PROYECTO</button>
+      </div>
+      <div className={styles.buttonBox}>
+        <a href={props.link}>
+          <button>visitar el proyecto</button>
         </a>
-
-        <a href={props.linkcode} target="_blank">
-          <button> VISITAR CODIGO </button>
+        <a href={props.linkcode}>
+          <button>visitar el codigo</button>
         </a>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import Proyect from "../Proyect/Proyect";
+import Slider from "../Slider/Slider";
 import styles from "./Portfolio.module.scss";
 
 export default function Portfolio(props) {
@@ -8,9 +8,9 @@ export default function Portfolio(props) {
       <div className={styles.titleBox}>
         <h2>PORTFOLIO</h2>
       </div>
-      {props.proyectsData.map((proyect, index) => {
-        return <Proyect {...proyect} inverted={index % 2 === 1} />;
-      })}
+      <div className={styles.sliderContainer}>
+        <Slider proyectsData={props.proyectsData} />
+      </div>
     </div>
   );
 }

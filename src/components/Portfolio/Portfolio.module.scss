@@ -15,4 +15,15 @@
     position: relative;
     top: 28px;
   }
+
+  .sliderContainer {
+    width: 90%;
+    margin: auto;
+
+    @media (max-width:1367px) {
+      width: 800px;
+      max-width: 90%;
+    }
+  }
 }
+
