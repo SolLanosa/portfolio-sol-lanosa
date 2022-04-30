@@ -19,10 +19,10 @@ export default function Proyects(props) {
       </div>
       <div className={styles.buttonBox}>
         <a href={props.link}>
-          <button>visitar el proyecto</button>
+          <button>Visitar el proyecto</button>
         </a>
         <a href={props.linkcode}>
-          <button>visitar el codigo</button>
+          <button>Visitar el codigo</button>
         </a>
       </div>
     </div>

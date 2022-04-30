@@ -137,7 +137,8 @@
 
     .contactBox {
       @include mixins.column;
-      margin-left: 20px;
+      justify-content: center;
+      align-items: center;
   
       .socialnetwork {
         margin-top: 50px;
@@ -149,6 +150,10 @@
           width: 90%;
         }
       }
+    }
+
+    .sendEmail {
+     margin-right: 0px;
     }
   }
 }

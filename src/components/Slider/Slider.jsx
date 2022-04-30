@@ -14,8 +14,7 @@ export default (props) => {
     <Swiper
       spaceBetween={50}
       slidesPerView={width > 1366 ? 2 : 1}
-      navigation
-      modules={[Navigation, Pagination]}
+      modules={[Pagination]}
       className={styles.swiper}
       pagination={{ clickable: true }}
     >

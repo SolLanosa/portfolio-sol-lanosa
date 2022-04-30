@@ -275,12 +275,12 @@
 @media (max-width: 780px) {
   .sectionInicial {
     padding-top: 15px;
-    margin-left: 20px;
   
     .inicialPage {
-      max-width: 100vw;
-      margin-left: 0px;
-      margin-right: 5px;   
+      max-width: 100vw; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
         h1 {
           @include mixins.font(base.$second-font, bold, 115px, base.$light-green);
           line-height: 115px;

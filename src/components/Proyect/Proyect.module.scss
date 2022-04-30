@@ -3,10 +3,9 @@
 
 .projectWrapper {
     width: 100%;
-    min-height: 700px;
-    max-height: 700px;
+    min-height: 600px;
+    max-height: 600px;
     box-sizing: border-box;
-
     @include mixins.column;
 
     .slideBox {
@@ -35,7 +34,7 @@
         p {
             width: 450px;
             text-align: justify;
-            @include mixins.font(base.$principal-font, none, 20px, black);
+            @include mixins.font(base.$principal-font, none, 17px, black);
         }
     }
 
@@ -55,6 +54,46 @@
             &:hover {
                 @include mixins.button(white, base.$dark-pink, 20);
                 color: base.$dark-pink;
+            }
+        }
+    }
+}
+
+@media (max-width:780px) {
+    .projectWrapper {
+        min-height: 550px;
+        max-height: 550px;
+        .description {
+            margin-bottom: 10px;
+
+            p {
+                width: 350px;
+                text-align: justify;
+                @include mixins.font(base.$principal-font, none, 15px, black);
+            }
+        }
+
+        .buttonBox {   
+            button {
+                @include mixins.button(base.$dark-pink, base.$dark-pink, 25);
+                @include mixins.rectangulo(100,25);
+                @include mixins.font(base.$principal-font, bolder, 14px, white);
+                @include mixins.display(center, center);
+                padding: 9px;
+            }
+        }
+    }
+}
+
+@media (max-width: 510px) {
+    .projectWrapper {
+        .description {
+           
+
+            p {
+                width: 290px;
+                
+                @include mixins.font(base.$principal-font, none, 13px, black);
             }
         }
     }

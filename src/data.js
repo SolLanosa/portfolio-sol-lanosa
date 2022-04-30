@@ -26,7 +26,7 @@ export const proyectsData = [
 
   {
     projectname: "Twitter para Desarrolladores",
-    photo: "/img/mac-sprint2.png",
+    photo: "/img/mac-sprint4.png",
     info: "El desafío de este proyecto consiste en la creación de una aplicación web interactiva, poniendo en práctica los fundamentos de la programación y el uso de React como líbreria. El principal objetivo fue el desarrollo de un filter que devuelve hoteles en función del país, precio, tamaño y disponibilidad.",
     link: "https://acamica-intro-clase.web.app/",
     linkcode: "https://github.com/SolLanosa/devs-united-acamica",
